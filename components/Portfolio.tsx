@@ -76,7 +76,7 @@ export default function Portfolio() {
             <span className="text-gold text-xs font-semibold tracking-[0.25em] uppercase">
               Our Work
             </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 leading-tight text-ink">
               Featured Projects
             </h2>
           </div>
@@ -89,8 +89,8 @@ export default function Portfolio() {
                 onClick={() => setActive(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   active === cat
-                    ? 'bg-gold text-black'
-                    : 'border border-white/10 text-white/50 hover:border-gold/40 hover:text-white'
+                    ? 'bg-ink text-white'
+                    : 'border border-ink/15 text-ink/50 hover:border-gold hover:text-ink'
                 }`}
               >
                 {cat}

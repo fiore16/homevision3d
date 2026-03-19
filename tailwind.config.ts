@@ -14,8 +14,9 @@ const config: Config = {
           light: '#00E070',
           dark: '#00A050',
         },
-        surface: '#0a0a0a',
-        deeper: '#000000',
+        surface: '#ECEAE4',
+        deeper: '#F5F4F0',
+        ink: '#111111',
         muted: '#666666',
       },
       fontFamily: {

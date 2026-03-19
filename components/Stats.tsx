@@ -55,11 +55,11 @@ export default function Stats() {
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 border border-white/5 rounded-2xl overflow-hidden">
           {stats.map(({ end, suffix, label, decimals }, i) => (
-            <div key={i} className="bg-black/40 backdrop-blur-sm px-8 py-12 text-center">
+            <div key={i} className="bg-deeper/80 backdrop-blur-sm px-8 py-12 text-center">
               <div className="font-display text-5xl md:text-6xl font-bold text-gold mb-2">
                 <Counter end={end} suffix={suffix} decimals={decimals} />
               </div>
-              <div className="text-white/40 text-sm tracking-wide">{label}</div>
+              <div className="text-ink/50 text-sm tracking-wide">{label}</div>
             </div>
           ))}
         </div>

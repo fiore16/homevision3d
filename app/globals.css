@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-deeper text-white font-sans antialiased;
+    @apply bg-deeper text-ink font-sans antialiased;
   }
 
   ::selection {
