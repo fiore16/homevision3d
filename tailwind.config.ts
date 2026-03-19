@@ -10,12 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         gold: {
-          DEFAULT: '#C8A96E',
-          light: '#D4BC8A',
-          dark: '#A8893E',
+          DEFAULT: '#00C864',
+          light: '#00E070',
+          dark: '#00A050',
         },
-        surface: '#111111',
-        deeper: '#0B0B0B',
+        surface: '#0a0a0a',
+        deeper: '#000000',
         muted: '#666666',
       },
       fontFamily: {

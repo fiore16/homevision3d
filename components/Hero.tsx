@@ -56,7 +56,7 @@ export default function Hero() {
           style={{
             fontSize: 'clamp(5rem, 18vw, 16rem)',
             WebkitTextFillColor: 'transparent',
-            WebkitTextStroke: '2px rgba(200,169,110,0.7)',
+            WebkitTextStroke: '2px rgba(0,200,100,0.7)',
           }}
         >
           3D
