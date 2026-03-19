@@ -8,16 +8,12 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Connect to Formspree, EmailJS, or your preferred service.
-    // Example with Formspree: replace YOUR_FORM_ID below and uncomment.
-    //
-    // const data = new FormData(e.currentTarget)
-    // await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //   method: 'POST',
-    //   body: data,
-    //   headers: { Accept: 'application/json' },
-    // })
-    setSubmitted(true)
+    const data = new FormData(e.currentTarget)
+    const res = await fetch(
+      `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID ?? 'YOUR_FORM_ID'}`,
+      { method: 'POST', body: data, headers: { Accept: 'application/json' } }
+    )
+    if (res.ok) setSubmitted(true)
   }
 
   return (

@@ -25,9 +25,23 @@ export default function Navbar() {
           HomeVision<span className="text-gold">3D</span>
         </a>
 
+        {/* Nav links */}
+        <div className="hidden md:flex items-center gap-8">
+          <a href="/tours" className={`text-sm font-sans transition-colors duration-300 ${
+            scrolled ? 'text-[#111111] hover:text-[#00C864]' : 'text-white/80 hover:text-white'
+          }`}>
+            Virtual Tours
+          </a>
+          <a href="/contact" className={`text-sm font-sans transition-colors duration-300 ${
+            scrolled ? 'text-[#111111] hover:text-[#00C864]' : 'text-white/80 hover:text-white'
+          }`}>
+            Contact
+          </a>
+        </div>
+
         {/* CTA — outlined on hero, solid when scrolled */}
         <a
-          href="#contact"
+          href="/contact"
           className={`text-sm font-semibold px-6 py-2.5 rounded-full transition-all duration-300 ${
             scrolled
               ? 'bg-ink text-white hover:bg-gold hover:text-black'
