@@ -68,7 +68,7 @@ export default function Portfolio() {
   }, [lightbox])
 
   return (
-    <section id="portfolio" className="py-24 px-6 bg-deeper">
+    <section id="portfolio" className="py-24 px-6 bg-[#F5F4F0]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
@@ -76,7 +76,7 @@ export default function Portfolio() {
             <span className="text-gold text-xs font-semibold tracking-[0.25em] uppercase">
               Our Work
             </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 leading-tight text-ink">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 leading-tight text-[#111111]">
               Featured Projects
             </h2>
           </div>
@@ -89,8 +89,8 @@ export default function Portfolio() {
                 onClick={() => setActive(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   active === cat
-                    ? 'bg-ink text-white'
-                    : 'border border-ink/15 text-ink/50 hover:border-gold hover:text-ink'
+                    ? 'bg-[#111111] text-white'
+                    : 'border border-[#111111]/15 text-[#111111]/50 hover:border-gold hover:text-[#111111]'
                 }`}
               >
                 {cat}
@@ -104,7 +104,7 @@ export default function Portfolio() {
           {filtered.map((project, i) => (
             <div
               key={`${project.title}-${i}`}
-              className="group relative overflow-hidden rounded-xl bg-surface cursor-zoom-in"
+              className="group relative overflow-hidden rounded-xl bg-[#ECEAE4] cursor-zoom-in"
               style={{
                 gridColumn: `span ${project.cols}`,
                 gridRow: `span ${project.rows}`,

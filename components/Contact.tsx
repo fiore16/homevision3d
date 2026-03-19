@@ -44,7 +44,7 @@ export default function Contact() {
                 href="tel:5134319571"
                 className="group flex items-center gap-5 hover:opacity-80 transition-opacity"
               >
-                <div className="w-12 h-12 bg-surface rounded-xl border border-white/5 flex items-center justify-center flex-shrink-0 group-hover:border-gold/30 transition-colors">
+                <div className="w-12 h-12 bg-[#ECEAE4] rounded-xl border border-white/5 flex items-center justify-center flex-shrink-0 group-hover:border-gold/30 transition-colors">
                   <Phone className="text-gold" size={18} />
                 </div>
                 <div>
@@ -59,7 +59,7 @@ export default function Contact() {
                 href="mailto:Matteo@homevision3D.com"
                 className="group flex items-center gap-5 hover:opacity-80 transition-opacity"
               >
-                <div className="w-12 h-12 bg-surface rounded-xl border border-white/5 flex items-center justify-center flex-shrink-0 group-hover:border-gold/30 transition-colors">
+                <div className="w-12 h-12 bg-[#ECEAE4] rounded-xl border border-white/5 flex items-center justify-center flex-shrink-0 group-hover:border-gold/30 transition-colors">
                   <Mail className="text-gold" size={18} />
                 </div>
                 <div>
@@ -73,7 +73,7 @@ export default function Contact() {
               </a>
 
               <div className="flex items-center gap-5">
-                <div className="w-12 h-12 bg-surface rounded-xl border border-white/5 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#ECEAE4] rounded-xl border border-white/5 flex items-center justify-center flex-shrink-0">
                   <Clock className="text-gold" size={18} />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function Contact() {
           </div>
 
           {/* Right — form */}
-          <div className="bg-surface border border-white/5 rounded-2xl p-8 md:p-10">
+          <div className="bg-[#ECEAE4] border border-white/5 rounded-2xl p-8 md:p-10">
             {submitted ? (
               <div className="text-center py-12">
                 <div className="w-16 h-16 rounded-full bg-gold/15 flex items-center justify-center mx-auto mb-6">
@@ -115,7 +115,7 @@ export default function Contact() {
                       type="text"
                       required
                       placeholder="Your name"
-                      className="w-full bg-deeper border border-white/8 rounded-lg px-4 py-3 text-white text-sm placeholder-white/25 focus:border-gold/40 focus:outline-none transition-colors"
+                      className="w-full bg-[#F5F4F0] border border-white/8 rounded-lg px-4 py-3 text-white text-sm placeholder-white/25 focus:border-gold/40 focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -127,7 +127,7 @@ export default function Contact() {
                       type="email"
                       required
                       placeholder="you@email.com"
-                      className="w-full bg-deeper border border-white/8 rounded-lg px-4 py-3 text-white text-sm placeholder-white/25 focus:border-gold/40 focus:outline-none transition-colors"
+                      className="w-full bg-[#F5F4F0] border border-white/8 rounded-lg px-4 py-3 text-white text-sm placeholder-white/25 focus:border-gold/40 focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export default function Contact() {
                     name="phone"
                     type="tel"
                     placeholder="(555) 000-0000"
-                    className="w-full bg-deeper border border-white/8 rounded-lg px-4 py-3 text-white text-sm placeholder-white/25 focus:border-gold/40 focus:outline-none transition-colors"
+                    className="w-full bg-[#F5F4F0] border border-white/8 rounded-lg px-4 py-3 text-white text-sm placeholder-white/25 focus:border-gold/40 focus:outline-none transition-colors"
                   />
                 </div>
 
@@ -151,7 +151,7 @@ export default function Contact() {
                   <select
                     name="service"
                     required
-                    className="w-full bg-deeper border border-white/8 rounded-lg px-4 py-3 text-white text-sm focus:border-gold/40 focus:outline-none transition-colors appearance-none"
+                    className="w-full bg-[#F5F4F0] border border-white/8 rounded-lg px-4 py-3 text-white text-sm focus:border-gold/40 focus:outline-none transition-colors appearance-none"
                     defaultValue=""
                   >
                     <option value="" disabled>
@@ -173,7 +173,7 @@ export default function Contact() {
                     required
                     rows={4}
                     placeholder="Describe your project — size, style, timeline, references..."
-                    className="w-full bg-deeper border border-white/8 rounded-lg px-4 py-3 text-white text-sm placeholder-white/25 focus:border-gold/40 focus:outline-none transition-colors resize-none"
+                    className="w-full bg-[#F5F4F0] border border-white/8 rounded-lg px-4 py-3 text-white text-sm placeholder-white/25 focus:border-gold/40 focus:outline-none transition-colors resize-none"
                   />
                 </div>
 

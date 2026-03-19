@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-deeper font-sans antialiased;
+    @apply bg-[#F5F4F0] font-sans antialiased;
     color: #111111;
   }
 
@@ -21,7 +21,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-deeper;
+    @apply bg-[#F5F4F0];
   }
 
   ::-webkit-scrollbar-thumb {

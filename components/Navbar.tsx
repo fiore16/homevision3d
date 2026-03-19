@@ -14,13 +14,13 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled
-        ? 'bg-deeper/95 backdrop-blur-md border-b border-black/8 py-3'
+        ? 'bg-[#F5F4F0]/95 backdrop-blur-md border-b border-black/10 py-3'
         : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo — white on hero, dark when scrolled */}
         <a href="#" className={`text-xl font-display font-bold tracking-tight flex items-center gap-1 transition-colors duration-300 ${
-          scrolled ? 'text-ink' : 'text-white'
+          scrolled ? 'text-[#111111]' : 'text-white'
         }`}>
           HomeVision<span className="text-gold">3D</span>
         </a>

@@ -5,7 +5,7 @@ export default function CTA() {
     <section className="py-32 px-6 overflow-hidden">
       <div className="max-w-5xl mx-auto relative">
         {/* Background card */}
-        <div className="relative rounded-3xl border border-gold/15 bg-surface overflow-hidden px-10 py-20 text-center">
+        <div className="relative rounded-3xl border border-gold/15 bg-[#ECEAE4] overflow-hidden px-10 py-20 text-center">
           {/* Inner glow */}
           <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/[0.03] pointer-events-none" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />

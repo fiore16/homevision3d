@@ -24,7 +24,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 px-6 bg-surface">
+    <section id="services" className="py-24 px-6 bg-[#ECEAE4]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="max-w-xl mb-16">
@@ -71,13 +71,13 @@ export default function Services() {
               </div>
 
               {/* Text — bottom half */}
-              <div className="bg-deeper p-7">
+              <div className="bg-[#F5F4F0] p-7">
                 <h3 className="font-display text-xl font-bold mb-2">{title}</h3>
-                <p className="text-white/45 text-sm leading-relaxed mb-5">{desc}</p>
+                <p className="text-[#111111]/45 text-sm leading-relaxed mb-5">{desc}</p>
 
                 <ul className="space-y-2 mb-6">
                   {features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-2.5 text-sm text-white/55">
+                    <li key={j} className="flex items-center gap-2.5 text-sm text-[#111111]/55">
                       <span className="w-1 h-1 rounded-full bg-gold flex-shrink-0" />
                       {f}
                     </li>

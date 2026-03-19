@@ -23,11 +23,11 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="bg-deeper">
+    <section id="process" className="bg-[#F5F4F0]">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 pt-24 pb-16 text-center">
         <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4">How It Works</p>
-        <h2 className="font-display font-bold text-ink leading-tight"
+        <h2 className="font-display font-bold text-[#111111] leading-tight"
           style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>
           Simple Process.<br />Stunning Results.
         </h2>
@@ -52,16 +52,16 @@ export default function Process() {
           </div>
 
           {/* Text — 40% */}
-          <div className={`md:w-2/5 flex flex-col justify-center px-10 md:px-16 py-16 bg-deeper border-t md:border-t-0 ${
+          <div className={`md:w-2/5 flex flex-col justify-center px-10 md:px-16 py-16 bg-[#F5F4F0] border-t md:border-t-0 ${
             i % 2 === 0 ? 'md:border-l' : 'md:border-r'
-          } border-ink/8`}>
-            <span className="font-display text-7xl font-black text-ink/5 leading-none mb-4 select-none">
+          } border-[#111111]/8`}>
+            <span className="font-display text-7xl font-black text-[#111111]/5 leading-none mb-4 select-none">
               {number}
             </span>
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-ink mb-4 -mt-8">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-[#111111] mb-4 -mt-8">
               {title}
             </h3>
-            <p className="text-ink/50 text-base leading-relaxed mb-8">{body}</p>
+            <p className="text-[#111111]/50 text-base leading-relaxed mb-8">{body}</p>
             {i === steps.length - 1 && (
               <a
                 href="#contact"
