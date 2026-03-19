@@ -3,46 +3,129 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-const categories = ['All', 'Interior', 'Exterior', '360° Tours'] as const
+const categories = ['All', 'Interior', 'Exterior'] as const
 type Category = (typeof categories)[number]
 
 const projects: {
   title: string
   category: Exclude<Category, 'All'>
   image: string
-  span?: 'wide'
+  span?: 'wide' | 'tall'
 }[] = [
+  {
+    title: 'Pool Estate',
+    category: 'Exterior',
+    image: '/images/Pool-Exterior.jpg',
+    span: 'wide',
+  },
+  {
+    title: 'Grand Exterior',
+    category: 'Exterior',
+    image: '/images/Grand-Exterior.jpg',
+  },
   {
     title: 'The Grove',
     category: 'Exterior',
-    image: 'https://placehold.co/1200x800/141414/C8A96E?text=The+Grove+%E2%80%94+Exterior',
+    image: '/images/the-grove.jpg',
+  },
+  {
+    title: 'Kitchen',
+    category: 'Interior',
+    image: '/images/Kitchen.jpg',
     span: 'wide',
   },
   {
-    title: 'Modern Kitchen',
+    title: 'Master Bath',
     category: 'Interior',
-    image: 'https://placehold.co/800x800/141414/C8A96E?text=Kitchen+Render',
+    image: '/images/Master Bath Tub_Shower.jpg',
   },
   {
-    title: 'Master Bathroom',
-    category: 'Interior',
-    image: 'https://placehold.co/800x800/141414/C8A96E?text=Master+Bath',
-  },
-  {
-    title: 'Springfield',
+    title: 'Hiergeist Night',
     category: 'Exterior',
-    image: 'https://placehold.co/800x800/141414/C8A96E?text=Springfield+%E2%80%94+Exterior',
+    image: '/images/Hiergeist-night.jpg',
   },
   {
-    title: 'Dining Room',
+    title: 'Dining Area',
     category: 'Interior',
-    image: 'https://placehold.co/800x800/141414/C8A96E?text=Dining+Room+Render',
+    image: '/images/dining area.jpg',
   },
   {
-    title: 'Sister Bay',
+    title: 'Denver Night',
     category: 'Exterior',
-    image: 'https://placehold.co/1200x800/141414/C8A96E?text=Sister+Bay+%E2%80%94+Exterior',
+    image: '/images/Denver-night.jpg',
+  },
+  {
+    title: '2026 St. Jude Dream Home',
+    category: 'Exterior',
+    image: '/images/2026 St. Jude Dream Home.jpg',
     span: 'wide',
+  },
+  {
+    title: 'Duplex Kitchen',
+    category: 'Interior',
+    image: '/images/Duplex_Kitchen.jpg',
+  },
+  {
+    title: 'Game Room & Wet Bar',
+    category: 'Interior',
+    image: '/images/Game Room_Wet Bar.jpg',
+  },
+  {
+    title: 'Rooftop',
+    category: 'Exterior',
+    image: '/images/Rooftop (1).jpg',
+  },
+  {
+    title: 'Simplex Living Room',
+    category: 'Interior',
+    image: '/images/Simplex_living.jpg',
+    span: 'wide',
+  },
+  {
+    title: 'Master Bath Vanity',
+    category: 'Interior',
+    image: '/images/Master Bath Vanity.jpg',
+  },
+  {
+    title: 'Quadplex',
+    category: 'Exterior',
+    image: '/images/Quadplex.jpg',
+  },
+  {
+    title: 'Simplex Bedroom',
+    category: 'Interior',
+    image: '/images/Simplex _Bedroom.jpg',
+  },
+  {
+    title: 'Balcony',
+    category: 'Exterior',
+    image: '/images/Balcony.png',
+  },
+  {
+    title: 'Powder Room',
+    category: 'Interior',
+    image: '/images/Powder Room.jpg',
+  },
+  {
+    title: '2026 New Orleans Dream Home',
+    category: 'Exterior',
+    image: '/images/2026 New Orleans Dream Home.jpg',
+    span: 'wide',
+  },
+  {
+    title: 'Simplex Hallway',
+    category: 'Interior',
+    image: '/images/simplex-hallway.jpg',
+  },
+  {
+    title: 'Fullerton Bath',
+    category: 'Interior',
+    image: '/images/Fullerton-Bath.jpg',
+  },
+  {
+    title: 'Simplex Kitchen',
+    category: 'Interior',
+    image: '/images/simplex kitchen.jpg',
   },
 ]
 
@@ -122,12 +205,6 @@ export default function Portfolio() {
             </div>
           ))}
         </div>
-
-        {/* Note for owner */}
-        <p className="text-center text-white/20 text-sm mt-10">
-          Replace placeholder images with your actual renders in{' '}
-          <code className="text-gold/40">components/Portfolio.tsx</code>
-        </p>
       </div>
     </section>
   )

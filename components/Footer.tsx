@@ -19,14 +19,18 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="#"
+                href="https://instagram.com/official_homevision3d/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="w-9 h-9 border border-white/10 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:border-gold/30 transition-all duration-200"
               >
                 <Instagram size={15} />
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/company/homevision-3d"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="w-9 h-9 border border-white/10 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:border-gold/30 transition-all duration-200"
               >

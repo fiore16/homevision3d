@@ -1,23 +1,39 @@
 'use client'
 
 import { ArrowDown, ArrowRight } from 'lucide-react'
-import { useEffect, useRef } from 'react'
+import Image from 'next/image'
+
+const heroSlides = [
+  '/images/Pool-Exterior.jpg',
+  '/images/Grand-Exterior.jpg',
+  '/images/Kitchen.jpg',
+  '/images/Hiergeist-night.jpg',
+]
+
+import { useEffect, useRef, useState } from 'react'
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null)
+  const [slide, setSlide] = useState(0)
 
+  // Auto-advance slideshow
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSlide((s) => (s + 1) % heroSlides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  // Mouse parallax glow
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!heroRef.current) return
-      const { clientX, clientY, currentTarget } = e
-      const target = currentTarget as HTMLElement
-      const rect = target.getBoundingClientRect()
-      const x = ((clientX - rect.left) / rect.width) * 100
-      const y = ((clientY - rect.top) / rect.height) * 100
+      const rect = heroRef.current.getBoundingClientRect()
+      const x = ((e.clientX - rect.left) / rect.width) * 100
+      const y = ((e.clientY - rect.top) / rect.height) * 100
       heroRef.current.style.setProperty('--mouse-x', `${x}%`)
       heroRef.current.style.setProperty('--mouse-y', `${y}%`)
     }
-
     const el = heroRef.current
     el?.addEventListener('mousemove', handleMouseMove)
     return () => el?.removeEventListener('mousemove', handleMouseMove)
@@ -29,36 +45,40 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ '--mouse-x': '50%', '--mouse-y': '50%' } as React.CSSProperties}
     >
-      {/* Deep dark background */}
-      <div className="absolute inset-0 bg-deeper" />
+      {/* Slideshow background */}
+      {heroSlides.map((src, i) => (
+        <div
+          key={src}
+          className="absolute inset-0 transition-opacity duration-1000"
+          style={{ opacity: i === slide ? 1 : 0 }}
+        >
+          <Image
+            src={src}
+            alt="HomeVision3D render"
+            fill
+            className="object-cover"
+            priority={i === 0}
+            sizes="100vw"
+          />
+        </div>
+      ))}
 
-      {/* Subtle grid */}
-      <div
-        className="absolute inset-0 opacity-[0.025]"
-        style={{
-          backgroundImage:
-            'linear-gradient(to right, rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.8) 1px, transparent 1px)',
-          backgroundSize: '72px 72px',
-        }}
-      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/80" />
 
-      {/* Radial glow — follows mouse on desktop */}
+      {/* Radial glow — follows mouse */}
       <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-500"
+        className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(200,169,110,0.08) 0%, transparent 70%)',
+            'radial-gradient(ellipse 60% 50% at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(200,169,110,0.10) 0%, transparent 70%)',
         }}
       />
-
-      {/* Static ambient orbs */}
-      <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] rounded-full bg-gold/[0.06] blur-[140px] animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] rounded-full bg-gold/[0.04] blur-[160px] animate-pulse-slow [animation-delay:2s]" />
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6 pt-24">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 border border-gold/25 rounded-full px-4 py-1.5 mb-10 animate-fade-in">
+        <div className="inline-flex items-center gap-2 border border-gold/30 rounded-full px-4 py-1.5 mb-10 animate-fade-in backdrop-blur-sm bg-black/20">
           <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
           <span className="text-gold text-xs font-medium tracking-[0.2em] uppercase">
             Photorealistic 3D Visualization
@@ -78,7 +98,7 @@ export default function Hero() {
 
         {/* Sub */}
         <p
-          className="text-white/55 leading-relaxed max-w-2xl mx-auto mb-12 animate-fade-up [animation-delay:0.15s] opacity-0"
+          className="text-white/70 leading-relaxed max-w-2xl mx-auto mb-12 animate-fade-up [animation-delay:0.15s] opacity-0"
           style={{ fontSize: 'clamp(1.1rem, 2vw, 1.35rem)' }}
         >
           Before the foundation is poured — interior renders, exterior
@@ -100,33 +120,47 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="flex items-center gap-2 border border-white/15 text-white/80 hover:text-white hover:border-gold/40 px-8 py-4 rounded-lg transition-all duration-200 text-base w-full sm:w-auto justify-center"
+            className="flex items-center gap-2 border border-white/25 text-white/90 hover:text-white hover:border-gold/50 backdrop-blur-sm bg-black/20 px-8 py-4 rounded-lg transition-all duration-200 text-base w-full sm:w-auto justify-center"
           >
             Request a Free Quote
           </a>
         </div>
 
-        {/* Social proof row */}
-        <div className="flex items-center justify-center gap-8 text-sm text-white/30 animate-fade-in [animation-delay:0.5s] opacity-0">
+        {/* Social proof */}
+        <div className="flex items-center justify-center gap-8 text-sm text-white/40 animate-fade-in [animation-delay:0.5s] opacity-0">
           <div className="flex items-center gap-2">
             <span className="text-gold font-semibold text-base">100+</span>
             <span>Projects</span>
           </div>
-          <div className="w-px h-4 bg-white/10" />
+          <div className="w-px h-4 bg-white/15" />
           <div className="flex items-center gap-2">
             <span className="text-gold font-semibold text-base">4.9★</span>
             <span>Rating</span>
           </div>
-          <div className="w-px h-4 bg-white/10" />
+          <div className="w-px h-4 bg-white/15" />
           <div className="flex items-center gap-2">
             <span className="text-gold font-semibold text-base">24h</span>
             <span>Quote Turnaround</span>
           </div>
         </div>
+
+        {/* Slide dots */}
+        <div className="flex items-center justify-center gap-2 mt-10">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setSlide(i)}
+              className={`rounded-full transition-all duration-300 ${
+                i === slide ? 'w-6 h-1.5 bg-gold' : 'w-1.5 h-1.5 bg-white/25 hover:bg-white/50'
+              }`}
+              aria-label={`Slide ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/25">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30">
         <span className="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
         <ArrowDown size={14} className="animate-bounce" />
       </div>
