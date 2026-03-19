@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#111111] min-h-screen">
+      <main className="bg-white min-h-screen">
         <div className="pt-28" />
         <Contact />
       </main>
