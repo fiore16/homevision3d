@@ -23,7 +23,7 @@ const panels = [
     label: 'Virtual Tours',
     desc: 'Let clients walk through their future home from anywhere in the world.',
     image: '/images/Kitchen.jpg',
-    href: '#contact',
+    href: '/tours',
   },
 ]
 

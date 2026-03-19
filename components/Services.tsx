@@ -85,7 +85,7 @@ export default function Services() {
                 </ul>
 
                 <a
-                  href="#contact"
+                  href="/contact"
                   className={`text-sm font-semibold transition-colors ${
                     featured ? 'text-gold hover:text-gold-light' : 'text-white/40 hover:text-gold'
                   }`}

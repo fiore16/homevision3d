@@ -36,7 +36,7 @@ export default function Footer() {
 
         {/* CTA */}
         <a
-          href="mailto:Matteo@homevision3D.com"
+          href="/contact"
           className="bg-gold text-black font-semibold px-8 py-3 rounded-full hover:bg-gold-light transition-colors text-sm mb-10"
         >
           Contact Us

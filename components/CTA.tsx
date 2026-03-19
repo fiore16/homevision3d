@@ -27,7 +27,7 @@ export default function CTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#contact"
+              href="/contact"
               className="group flex items-center gap-2 bg-gold text-black font-semibold px-8 py-4 rounded-lg hover:bg-gold-light transition-all duration-200 text-base"
             >
               Get Your Free Quote

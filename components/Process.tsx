@@ -64,7 +64,7 @@ export default function Process() {
             <p className="text-[#111111]/50 text-base leading-relaxed mb-8">{body}</p>
             {i === steps.length - 1 && (
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-gold text-black font-semibold px-6 py-3 rounded-full text-sm hover:bg-gold-light transition-colors self-start"
               >
                 Get Started →

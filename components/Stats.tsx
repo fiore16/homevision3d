@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 const stats = [
-  { end: 100, suffix: '+', label: 'Projects Delivered' },
+  { end: 1, suffix: 'k+', label: 'Projects Delivered' },
   { end: 4.9, suffix: '★', label: 'Average Rating', decimals: 1 },
   { end: 24,  suffix: 'h', label: 'Quote Turnaround' },
   { end: 100, suffix: '%', label: 'Revision Guarantee' },
