@@ -1,3 +1,5 @@
+'use client'
+
 export default function Maintenance() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
