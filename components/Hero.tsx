@@ -7,10 +7,8 @@ import { ArrowDown } from 'lucide-react'
 const slides = [
   '/images/Pool-Exterior.jpg',
   '/images/Grand-Exterior.jpg',
-  '/images/Kitchen.jpg',
   '/images/Hiergeist-night.jpg',
   '/images/2026 St. Jude Dream Home.jpg',
-  '/images/Simplex_living.jpg',
 ]
 
 export default function Hero() {
@@ -22,47 +20,67 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Slideshow */}
+    <section className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center bg-black">
+
+      {/* ── Background slideshow ── */}
       {slides.map((src, i) => (
-        <div
-          key={src}
-          className="absolute inset-0 transition-opacity duration-1000"
-          style={{ opacity: i === slide ? 1 : 0 }}
-        >
-          <Image src={src} alt="" fill className="object-cover" priority={i === 0} sizes="100vw" />
+        <div key={src} className="absolute inset-0 transition-opacity duration-1500"
+          style={{ opacity: i === slide ? 1 : 0, transitionDuration: '1500ms' }}>
+          <Image src={src} alt="" fill className="object-cover opacity-60" priority={i === 0} sizes="100vw" />
         </div>
       ))}
 
-      {/* Gradient overlay — bottom-heavy so text pops */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+      {/* ── Gradient ── */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
 
-      {/* Big centered text */}
-      <div className="relative z-10 text-center px-6">
-        <h1 className="font-display font-bold text-white leading-none tracking-tight uppercase"
-          style={{ fontSize: 'clamp(3.5rem, 10vw, 9rem)' }}>
-          Your New<br />
-          <span className="text-gradient-gold">Rendering</span><br />
-          Company
-        </h1>
+      {/* ── GIANT text-mask headline — render shows through the letters ── */}
+      <div className="relative z-10 text-center select-none px-4">
+        <div
+          className="font-display font-black uppercase leading-none tracking-tighter"
+          style={{
+            fontSize: 'clamp(5rem, 18vw, 16rem)',
+            backgroundImage: `url('${slides[slide]}')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            transition: 'background-image 1.5s ease',
+            filter: 'brightness(1.4) contrast(1.1)',
+          }}
+        >
+          HomeVision
+        </div>
+        <div
+          className="font-display font-black uppercase leading-none tracking-tighter"
+          style={{
+            fontSize: 'clamp(5rem, 18vw, 16rem)',
+            WebkitTextFillColor: 'transparent',
+            WebkitTextStroke: '2px rgba(200,169,110,0.7)',
+          }}
+        >
+          3D
+        </div>
       </div>
 
-      {/* Featured Work scroll cue */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60 z-10">
-        <span className="text-xs tracking-[0.3em] uppercase">Featured Work</span>
-        <ArrowDown size={16} className="animate-bounce" />
+      {/* ── Tagline ── */}
+      <p className="relative z-10 text-white/50 text-sm md:text-base tracking-[0.3em] uppercase mt-6 font-sans">
+        Photorealistic 3D Visualization
+      </p>
+
+      {/* ── Scroll cue ── */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 z-10">
+        <span className="text-[10px] tracking-[0.35em] uppercase">Featured Work</span>
+        <ArrowDown size={14} className="animate-bounce" />
       </div>
 
-      {/* Slide dots */}
+      {/* ── Slide dots ── */}
       <div className="absolute bottom-10 right-8 flex gap-2 z-10">
         {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setSlide(i)}
+          <button key={i} onClick={() => setSlide(i)}
             className={`rounded-full transition-all duration-300 ${
-              i === slide ? 'w-5 h-1.5 bg-gold' : 'w-1.5 h-1.5 bg-white/30 hover:bg-white/60'
-            }`}
-          />
+              i === slide ? 'w-5 h-1.5 bg-gold' : 'w-1.5 h-1.5 bg-white/25 hover:bg-white/50'
+            }`} />
         ))}
       </div>
     </section>
