@@ -29,12 +29,12 @@ const panels = [
 
 export default function ServicePanels() {
   return (
-    <section id="services" className="grid grid-cols-2 grid-rows-2" style={{ height: '200vh' }}>
+    <section id="services" className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 md:h-[200vh]">
       {panels.map(({ label, desc, image, href }) => (
         <a
           key={label}
           href={href}
-          className="group relative overflow-hidden block"
+          className="group relative overflow-hidden block h-[60vh] md:h-auto"
         >
           {/* Image */}
           <Image
@@ -42,7 +42,7 @@ export default function ServicePanels() {
             alt={label}
             fill
             className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
-            sizes="50vw"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
 
           {/* Default overlay */}
