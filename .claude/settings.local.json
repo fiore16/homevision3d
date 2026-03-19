@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:homevision3d.com)"
+    ]
+  }
+}
