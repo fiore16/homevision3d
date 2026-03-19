@@ -15,7 +15,7 @@ export default function Statement() {
       </div>
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-        <p className="text-white/30 text-xs tracking-[0.4em] uppercase font-sans mb-8">
+        <p className="text-white text-xs tracking-[0.4em] uppercase font-sans mb-8">
           Our Philosophy
         </p>
         <h2
@@ -25,7 +25,7 @@ export default function Statement() {
           "Before the foundation<br />
           <span className="text-gradient-gold">is poured.</span>"
         </h2>
-        <p className="text-white/45 text-lg md:text-xl mt-10 leading-relaxed max-w-2xl mx-auto font-sans">
+        <p className="text-white text-lg md:text-xl mt-10 leading-relaxed max-w-2xl mx-auto font-sans">
           Every great build starts with a vision. We make that vision undeniable —
           to your clients, your investors, and your team.
         </p>

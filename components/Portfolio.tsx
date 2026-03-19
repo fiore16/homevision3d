@@ -26,13 +26,15 @@ const projects: {
   { title: '2026 St. Jude Dream Home', category: 'Exterior', image: '/images/2026 St. Jude Dream Home.jpg',        cols: 2, rows: 1 },
   { title: 'Game Room & Wet Bar',      category: 'Interior', image: '/images/Game Room_Wet Bar.jpg',               cols: 1, rows: 1 },
   { title: 'Duplex Kitchen',           category: 'Interior', image: '/images/Duplex_Kitchen.jpg',                  cols: 1, rows: 1 },
-  { title: 'Rooftop',                  category: 'Exterior', image: '/images/Rooftop (1).jpg',                     cols: 1, rows: 1 },
+  { title: 'Rooftop',                  category: 'Interior', image: '/images/Rooftop (1).jpg',                     cols: 1, rows: 1 },
   { title: 'Quadplex',                 category: 'Exterior', image: '/images/Quadplex.jpg',                        cols: 1, rows: 1 },
   { title: '2026 New Orleans Dream Home', category: 'Exterior', image: '/images/2026 New Orleans Dream Home.jpg',  cols: 2, rows: 1 },
   { title: 'Master Bath Vanity',       category: 'Interior', image: '/images/Master Bath Vanity.jpg',              cols: 1, rows: 1 },
   { title: 'Simplex Bedroom',          category: 'Interior', image: '/images/Simplex _Bedroom.jpg',                cols: 1, rows: 1 },
-  { title: 'Balcony',                  category: 'Exterior', image: '/images/Balcony.png',                         cols: 1, rows: 1 },
+  { title: 'Balcony',                  category: 'Interior', image: '/images/Balcony.png',                         cols: 1, rows: 1 },
   { title: 'Powder Room',              category: 'Interior', image: '/images/Powder Room.jpg',                     cols: 1, rows: 1 },
+  { title: 'Cypress',                  category: 'Exterior', image: '/images/exterior-cypress.jpg',                cols: 2, rows: 1 },
+  { title: 'Tulsa',                    category: 'Exterior', image: '/images/Tulsa.jpg',                           cols: 1, rows: 2 },
   { title: 'Fullerton Bath',           category: 'Interior', image: '/images/Fullerton-Bath.jpg',                  cols: 1, rows: 1 },
   { title: 'Simplex Hallway',          category: 'Interior', image: '/images/simplex-hallway.jpg',                 cols: 1, rows: 1 },
   { title: 'Simplex Kitchen',          category: 'Interior', image: '/images/simplex kitchen.jpg',                 cols: 1, rows: 1 },
@@ -180,15 +182,9 @@ export default function Portfolio() {
             <ChevronRight size={22} />
           </button>
 
-          {/* Caption */}
+          {/* Counter only */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center">
-            <p className="text-gold text-xs tracking-widest uppercase mb-1">
-              {filtered[lightbox].category}
-            </p>
-            <p className="text-white font-display text-lg font-semibold">
-              {filtered[lightbox].title}
-            </p>
-            <p className="text-white/30 text-xs mt-1">
+            <p className="text-white/30 text-xs">
               {lightbox + 1} / {filtered.length}
             </p>
           </div>
