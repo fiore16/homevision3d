@@ -10,6 +10,7 @@ export default function Home() {
 // import Statement from '@/components/Statement'
 // import ServicePanels from '@/components/ServicePanels'
 // import Portfolio from '@/components/Portfolio'
+// import VirtualTours from '@/components/VirtualTours'
 // import Stats from '@/components/Stats'
 // import Process from '@/components/Process'
 // import Clients from '@/components/Clients'
@@ -26,6 +27,7 @@ export default function Home() {
 //         <Statement />
 //         <ServicePanels />
 //         <Portfolio />
+//         <VirtualTours />
 //         <Stats />
 //         <Process />
 //         <Clients />
