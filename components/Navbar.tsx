@@ -6,25 +6,33 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60)
+    const handleScroll = () => setScrolled(window.scrollY > 80)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? 'bg-deeper/95 backdrop-blur-md border-b border-black/5 py-3' : 'bg-transparent py-5'
+      scrolled
+        ? 'bg-deeper/95 backdrop-blur-md border-b border-black/8 py-3'
+        : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="text-xl font-display font-bold tracking-tight text-ink flex items-center gap-1">
+        {/* Logo — white on hero, dark when scrolled */}
+        <a href="#" className={`text-xl font-display font-bold tracking-tight flex items-center gap-1 transition-colors duration-300 ${
+          scrolled ? 'text-ink' : 'text-white'
+        }`}>
           HomeVision<span className="text-gold">3D</span>
         </a>
 
-        {/* Single CTA */}
+        {/* CTA — outlined on hero, solid when scrolled */}
         <a
           href="#contact"
-          className="bg-ink text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-gold hover:text-black transition-colors duration-200"
+          className={`text-sm font-semibold px-6 py-2.5 rounded-full transition-all duration-300 ${
+            scrolled
+              ? 'bg-ink text-white hover:bg-gold hover:text-black'
+              : 'border border-white/40 text-white hover:bg-white hover:text-black backdrop-blur-sm'
+          }`}
         >
           Contact Us
         </a>
