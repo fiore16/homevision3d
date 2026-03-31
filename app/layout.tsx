@@ -44,7 +44,14 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${playfair.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <script dangerouslySetInnerHTML={{ __html: `
+          document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') e.preventDefault();
+          });
+        `}} />
+      </body>
     </html>
   )
 }

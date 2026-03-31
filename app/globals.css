@@ -7,6 +7,15 @@
     scroll-behavior: smooth;
   }
 
+  /* Prevent right-click saving, dragging, and selection of images */
+  img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
   body {
     @apply bg-[#F5F4F0] font-sans antialiased;
     color: #111111;
