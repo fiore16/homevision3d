@@ -20,16 +20,16 @@ export default function Footer() {
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-24">
         {/* Logo */}
-        <div className="text-3xl font-display font-bold text-white mb-6">
+        <div className="text-5xl font-display font-bold text-white mb-8">
           HomeVision <span className="text-gold">3D</span>
         </div>
 
         {/* Contact info */}
-        <div className="flex flex-col gap-2 mb-8">
-          <a href="mailto:Matteo@homevision3D.com" className="text-white/60 hover:text-white transition-colors text-sm tracking-wide">
+        <div className="flex flex-col gap-3 mb-8">
+          <a href="mailto:Matteo@homevision3D.com" className="text-white hover:text-gold transition-colors text-lg tracking-wide">
             Matteo@homevision3D.com
           </a>
-          <a href="tel:5134319571" className="text-white/60 hover:text-white transition-colors text-sm tracking-wide">
+          <a href="tel:5134319571" className="text-white hover:text-gold transition-colors text-lg tracking-wide">
             (513) 431-9571
           </a>
         </div>
@@ -45,12 +45,12 @@ export default function Footer() {
         {/* Social */}
         <div className="flex items-center gap-4 mb-10">
           <a href="https://instagram.com/official_homevision3d/" target="_blank" rel="noopener noreferrer"
-            className="w-9 h-9 border border-white/20 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 transition-all">
-            <Instagram size={15} />
+            className="w-12 h-12 border border-white/60 rounded-full flex items-center justify-center text-white hover:border-gold hover:text-gold transition-all">
+            <Instagram size={20} />
           </a>
           <a href="https://linkedin.com/company/homevision-3d" target="_blank" rel="noopener noreferrer"
-            className="w-9 h-9 border border-white/20 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 transition-all">
-            <Linkedin size={15} />
+            className="w-12 h-12 border border-white/60 rounded-full flex items-center justify-center text-white hover:border-gold hover:text-gold transition-all">
+            <Linkedin size={20} />
           </a>
         </div>
 
