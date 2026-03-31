@@ -64,16 +64,16 @@ export default function Hero() {
         {/* ── Animated arrow ── */}
         <div className="mt-14 flex flex-col items-center gap-3">
           <a href="#services" className="flex flex-col items-center gap-2 group cursor-pointer">
-            <span className="text-white/35 text-[10px] tracking-[0.4em] uppercase font-sans group-hover:text-white/60 transition-colors">
+            <span className="text-white/35 text-sm tracking-[0.4em] uppercase font-sans group-hover:text-white/60 transition-colors">
               See Our Work
             </span>
             {/* Animated triple-chevron arrow */}
-            <div className="flex flex-col items-center gap-0.5">
+            <div className="flex flex-col items-center gap-1">
               {[0, 1, 2].map((i) => (
                 <svg
                   key={i}
-                  width="20"
-                  height="11"
+                  width="32"
+                  height="17"
                   viewBox="0 0 20 11"
                   fill="none"
                   className="opacity-0"
