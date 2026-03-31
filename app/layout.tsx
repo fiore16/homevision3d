@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'HomeVision3D | Photorealistic Architectural Renders',
+  title: 'HomeVision 3D | Photorealistic Architectural Renders',
   description:
     'Professional 3D architectural visualization — interior renders, exterior renders, and 360° virtual tours that bring your projects to life before construction begins.',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'photorealistic',
   ],
   openGraph: {
-    title: 'HomeVision3D | Photorealistic Architectural Renders',
+    title: 'HomeVision 3D | Photorealistic Architectural Renders',
     description:
       'Visualize the Future of Your Homes — Before the Foundation.',
     type: 'website',
