@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" width="520" height="140">
+  <!-- White background -->
+  <rect width="520" height="140" fill="white"/>
+
+  <!-- Cube mark (centered vertically at x=30, y=20, 100x100) -->
+  <!-- Top face -->
+  <polygon points="90,20 140,47 90,74 40,47" fill="#00C864"/>
+  <!-- Left face -->
+  <polygon points="40,47 90,74 90,120 40,93" fill="#00C864"/>
+  <!-- Right face -->
+  <polygon points="140,47 140,93 90,120 90,74" fill="#00C864"/>
+  <!-- White dividing lines -->
+  <line x1="90" y1="20" x2="90" y2="74" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="90" y1="74" x2="40" y2="47" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="90" y1="74" x2="140" y2="47" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="90" y1="74" x2="90" y2="120" stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Text: HomeVision -->
+  <text x="168" y="92" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="62" fill="#111111" letter-spacing="-1">HomeVision</text>
+
+  <!-- Text: 3D -->
+  <text x="168" y="126" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="28" fill="#00C864" letter-spacing="4">3D</text>
+</svg>
