@@ -23,7 +23,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex items-center gap-3 mb-6">
           <CubeLogo size={36} />
-          <span className="text-3xl font-display font-bold text-white">HomeVision<span className="text-gold">3D</span></span>
+          <span className="text-3xl font-display font-bold text-white">HomeVision <span className="text-gold">3D</span></span>
         </div>
 
         {/* Contact info */}

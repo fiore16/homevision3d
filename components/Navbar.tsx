@@ -27,7 +27,7 @@ export default function Navbar() {
           scrolled || lightBg ? 'text-[#111111]' : 'text-white'
         }`}>
           <CubeLogo size={26} />
-          <span className="text-xl">HomeVision<span className="text-gold">3D</span></span>
+          <span className="text-xl">HomeVision <span className="text-gold">3D</span></span>
         </a>
 
 
