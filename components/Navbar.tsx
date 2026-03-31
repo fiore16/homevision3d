@@ -22,7 +22,7 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo — white on hero, dark on light pages */}
-        <a href="/" className={`text-2xl font-display font-bold tracking-tight flex items-center gap-1 transition-colors duration-300 ${
+        <a href="/" className={`text-3xl font-display font-bold tracking-tight flex items-center gap-1 transition-colors duration-300 ${
           scrolled || lightBg ? 'text-[#111111]' : 'text-white'
         }`}>
           HomeVision <span className="text-gold">3D</span>
