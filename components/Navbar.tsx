@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import CubeLogo from '@/components/CubeLogo'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -22,10 +23,11 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo — white on hero, dark on light pages */}
-        <a href="/" className={`text-xl font-display font-bold tracking-tight flex items-center gap-1 transition-colors duration-300 ${
+        <a href="/" className={`font-display font-bold tracking-tight flex items-center gap-2.5 transition-colors duration-300 ${
           scrolled || lightBg ? 'text-[#111111]' : 'text-white'
         }`}>
-          HomeVision<span className="text-gold">3D</span>
+          <CubeLogo size={26} />
+          <span className="text-xl">HomeVision<span className="text-gold">3D</span></span>
         </a>
 
 

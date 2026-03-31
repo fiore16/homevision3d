@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Instagram, Linkedin } from 'lucide-react'
+import CubeLogo from '@/components/CubeLogo'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -20,8 +21,9 @@ export default function Footer() {
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-24">
         {/* Logo */}
-        <div className="text-3xl font-display font-bold text-white mb-6">
-          HomeVision<span className="text-gold">3D</span>
+        <div className="flex items-center gap-3 mb-6">
+          <CubeLogo size={36} />
+          <span className="text-3xl font-display font-bold text-white">HomeVision<span className="text-gold">3D</span></span>
         </div>
 
         {/* Contact info */}
