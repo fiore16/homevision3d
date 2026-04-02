@@ -29,6 +29,20 @@ export default function Navbar() {
         </a>
 
 
+        {/* Nav links */}
+        <div className="hidden md:flex items-center gap-8">
+          <a href="/" className={`text-sm font-sans transition-colors duration-300 ${
+            scrolled || lightBg ? 'text-[#111111] hover:text-[#00C864]' : 'text-white/80 hover:text-white'
+          }`}>
+            Home
+          </a>
+          <a href="/tours" className={`text-sm font-sans transition-colors duration-300 ${
+            scrolled || lightBg ? 'text-[#111111] hover:text-[#00C864]' : 'text-white/80 hover:text-white'
+          }`}>
+            Virtual Tours
+          </a>
+        </div>
+
         {/* CTA — outlined on hero, solid on light pages */}
         <a
           href="/contact"
