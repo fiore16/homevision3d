@@ -16,13 +16,9 @@ export default function About() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 flex flex-col md:flex-row items-center gap-14">
-        {/* Photo placeholder — replace with your actual photo */}
-        <div className="flex-shrink-0 w-52 h-64 md:w-64 md:h-80 rounded-2xl overflow-hidden bg-white/10 border border-white/10 relative">
-          {/* Add your photo to public/images/matteo.jpg and uncomment below */}
-          {/* <Image src="/images/matteo.jpg" alt="Matteo Fiore" fill className="object-cover grayscale" /> */}
-          <div className="absolute inset-0 flex items-center justify-center text-white/30 text-sm tracking-widest uppercase text-center px-4">
-            Add your<br />photo here
-          </div>
+        {/* Headshot */}
+        <div className="flex-shrink-0 w-52 h-64 md:w-64 md:h-80 rounded-2xl overflow-hidden border border-white/10 relative">
+          <Image src="/matteo face.jpg" alt="Matteo Fiore" fill className="object-cover" />
         </div>
 
         {/* Bio */}
