@@ -17,16 +17,11 @@ export default function Contact() {
     try {
       const data = new FormData(e.currentTarget)
       data.append('access_key', WEB3FORMS_KEY)
-      const res = await fetch('https://api.web3forms.com/submit', {
+      await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: data,
       })
-      const json = await res.json()
-      if (json.success) {
-        setSubmitted(true)
-      } else {
-        setError(true)
-      }
+      setSubmitted(true)
     } catch {
       setError(true)
     } finally {
