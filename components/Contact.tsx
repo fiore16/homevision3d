@@ -7,21 +7,14 @@ const WEB3FORMS_KEY = '05b1f729-72a1-457e-bfaf-f997b2f17d02'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState(false)
-  const [loading, setLoading] = useState(false)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setLoading(true)
-    const payload: Record<string, string> = { access_key: WEB3FORMS_KEY }
-    new FormData(e.currentTarget).forEach((v, k) => { payload[k] = v as string })
-    // Fire and forget — don't await or read the response (CORS blocks body reads on 503)
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(payload),
-    }).catch(() => {})
-    setLoading(false)
+    const data = new FormData(e.currentTarget)
+    data.append('access_key', WEB3FORMS_KEY)
+    // FormData = simple CORS request (no preflight). Fire-and-forget so we
+    // never try to read the response body (which would trigger a CORS block).
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: data }).catch(() => {})
     setSubmitted(true)
   }
 
@@ -184,17 +177,10 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  disabled={loading}
-                  className="w-full bg-gold text-black font-semibold py-4 rounded-lg hover:bg-gold-light transition-colors text-base mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full bg-gold text-black font-semibold py-4 rounded-lg hover:bg-gold-light transition-colors text-base mt-2"
                 >
-                  {loading ? 'Sending…' : 'Send Request — Get Quote in 24h'}
+                  Send Request — Get Quote in 24h
                 </button>
-
-                {error && (
-                  <p className="text-red-500 text-sm text-center">
-                    Something went wrong. Please email us directly at Matteo@homevision3D.com
-                  </p>
-                )}
 
                 <p className="text-black/30 text-xs text-center">
                   No commitment required. We respond within 24 hours.
