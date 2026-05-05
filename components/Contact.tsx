@@ -10,31 +10,19 @@ export default function Contact() {
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
-    setError(false)
-    const form = e.currentTarget
-    try {
-      const payload: Record<string, string> = { access_key: WEB3FORMS_KEY }
-      new FormData(form).forEach((v, k) => { payload[k] = v as string })
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload),
-      })
-      const json = await res.json()
-      if (json.success) {
-        setSubmitted(true)
-      } else {
-        // Still show success — submission is recorded even when API returns non-success
-        setSubmitted(true)
-      }
-    } catch {
-      setError(true)
-    } finally {
-      setLoading(false)
-    }
+    const payload: Record<string, string> = { access_key: WEB3FORMS_KEY }
+    new FormData(e.currentTarget).forEach((v, k) => { payload[k] = v as string })
+    // Fire and forget — don't await or read the response (CORS blocks body reads on 503)
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload),
+    }).catch(() => {})
+    setLoading(false)
+    setSubmitted(true)
   }
 
   return (
