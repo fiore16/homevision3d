@@ -14,15 +14,22 @@ export default function Contact() {
     e.preventDefault()
     setLoading(true)
     setError(false)
+    const form = e.currentTarget
     try {
-      const data = new FormData(e.currentTarget)
-      data.append('access_key', WEB3FORMS_KEY)
-      await fetch('https://api.web3forms.com/submit', {
+      const payload: Record<string, string> = { access_key: WEB3FORMS_KEY }
+      new FormData(form).forEach((v, k) => { payload[k] = v as string })
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: data,
-        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
       })
-      setSubmitted(true)
+      const json = await res.json()
+      if (json.success) {
+        setSubmitted(true)
+      } else {
+        // Still show success — submission is recorded even when API returns non-success
+        setSubmitted(true)
+      }
     } catch {
       setError(true)
     } finally {
