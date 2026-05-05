@@ -3,19 +3,35 @@
 import { useState } from 'react'
 import { Phone, Mail, Clock, Send } from 'lucide-react'
 
+const WEB3FORMS_KEY = '05b1f729-72a1-457e-bfaf-f997b2f17d02'
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const data = new FormData(e.currentTarget)
-    data.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '')
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: data,
-    })
-    const json = await res.json()
-    if (json.success) setSubmitted(true)
+    setLoading(true)
+    setError(false)
+    try {
+      const data = new FormData(e.currentTarget)
+      data.append('access_key', WEB3FORMS_KEY)
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data,
+      })
+      const json = await res.json()
+      if (json.success) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -177,10 +193,17 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gold text-black font-semibold py-4 rounded-lg hover:bg-gold-light transition-colors text-base mt-2"
+                  disabled={loading}
+                  className="w-full bg-gold text-black font-semibold py-4 rounded-lg hover:bg-gold-light transition-colors text-base mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Request — Get Quote in 24h
+                  {loading ? 'Sending…' : 'Send Request — Get Quote in 24h'}
                 </button>
+
+                {error && (
+                  <p className="text-red-500 text-sm text-center">
+                    Something went wrong. Please email us directly at Matteo@homevision3D.com
+                  </p>
+                )}
 
                 <p className="text-black/30 text-xs text-center">
                   No commitment required. We respond within 24 hours.
