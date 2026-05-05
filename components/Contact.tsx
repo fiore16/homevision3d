@@ -9,11 +9,13 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const data = new FormData(e.currentTarget)
-    const res = await fetch(
-      `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID ?? 'YOUR_FORM_ID'}`,
-      { method: 'POST', body: data, headers: { Accept: 'application/json' } }
-    )
-    if (res.ok) setSubmitted(true)
+    data.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '')
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data,
+    })
+    const json = await res.json()
+    if (json.success) setSubmitted(true)
   }
 
   return (
