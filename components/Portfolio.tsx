@@ -29,7 +29,6 @@ const projects: {
   { title: 'Quadplex',                 category: 'Exterior', image: '/images/Quadplex.jpg',                        cols: 1, rows: 1 },
   { title: '2026 New Orleans Dream Home', category: 'Exterior', image: '/images/2026 New Orleans Dream Home.jpg',  cols: 2, rows: 1 },
   { title: 'Master Bath Vanity',       category: 'Interior', image: '/images/Master Bath Vanity.jpg',              cols: 1, rows: 1 },
-  { title: 'Balcony',                  category: 'Interior', image: '/images/Balcony.png',                         cols: 1, rows: 1 },
   { title: 'Powder Room',              category: 'Interior', image: '/images/Powder Room.jpg',                     cols: 1, rows: 1 },
   { title: 'Cypress',                  category: 'Exterior', image: '/images/exterior-cypress.jpg',                cols: 2, rows: 1 },
   { title: 'Tulsa',                    category: 'Exterior', image: '/images/Tulsa.jpg',                           cols: 1, rows: 2 },
@@ -47,6 +46,9 @@ const projects: {
   { title: 'Modern Kitchen',          category: 'Interior', image: '/images/Kitchen_4k.jpg',                      cols: 1, rows: 1 },
   { title: "Chef's Kitchen",          category: 'Interior', image: '/images/kitchen  (1).jpg',                    cols: 1, rows: 1 },
   { title: 'Recovery Room',           category: 'Interior', image: '/images/Recovery Room.png',                   cols: 1, rows: 1 },
+  { title: 'Unit Living Room',        category: 'Interior', image: '/images/Unit Living Room.jpg',                 cols: 2, rows: 1 },
+  { title: 'Unit Bedroom',            category: 'Interior', image: '/images/Unit Bedroom.jpg',                     cols: 1, rows: 1 },
+  { title: 'Unit Kitchen & Living',   category: 'Interior', image: '/images/Unit Kitchen_living.jpg',              cols: 1, rows: 1 },
 ]
 
 export default function Portfolio() {
