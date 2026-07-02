@@ -5,7 +5,7 @@ export default function Statement() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/Denver-night.jpg"
+          src="/images/621 13th Ave W_Twilight.jpg"
           alt=""
           fill
           className="object-cover"
