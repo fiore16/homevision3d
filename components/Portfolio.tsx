@@ -21,7 +21,7 @@ const projects: {
   { title: 'The Grove',                 category: 'Exterior', image: '/images/the-grove.jpg',                       cols: 1, rows: 1 },
   { title: 'Master Bath',               category: 'Interior', image: '/images/Master Bath Tub_Shower.jpg',          cols: 1, rows: 2 },
   { title: 'Simplex Living Room',       category: 'Interior', image: '/images/Simplex_living.jpg',                  cols: 2, rows: 1 },
-  { title: 'Denver Night',             category: 'Exterior', image: '/images/Denver-night.jpg',                    cols: 1, rows: 1 },
+  { title: '621 13th Ave W',            category: 'Exterior', image: '/images/621 13th Ave W_Twilight.jpg',         cols: 1, rows: 1 },
   { title: 'Dining Area',              category: 'Interior', image: '/images/dining area.jpg',                     cols: 1, rows: 1 },
   { title: '2026 St. Jude Dream Home', category: 'Exterior', image: '/images/2026 St. Jude Dream Home.jpg',        cols: 2, rows: 1 },
   { title: 'Game Room & Wet Bar',      category: 'Interior', image: '/images/Game Room_Wet Bar.jpg',               cols: 1, rows: 1 },
@@ -36,6 +36,17 @@ const projects: {
   { title: 'Fullerton Bath',           category: 'Interior', image: '/images/Fullerton-Bath.jpg',                  cols: 1, rows: 1 },
   { title: 'Simplex Hallway',          category: 'Interior', image: '/images/simplex-hallway.jpg',                 cols: 1, rows: 1 },
   { title: 'Simplex Kitchen',          category: 'Interior', image: '/images/simplex kitchen.jpg',                 cols: 1, rows: 1 },
+  { title: 'Aerial',                  category: 'Exterior', image: '/images/aerial.jpg',                          cols: 2, rows: 1 },
+  { title: 'Brick Exterior',          category: 'Exterior', image: '/images/Brick Exterior.jpg',                  cols: 1, rows: 1 },
+  { title: 'Master Bedroom',          category: 'Interior', image: '/images/Master Bedroom 4k.jpg',               cols: 2, rows: 1 },
+  { title: 'Master Bathroom',         category: 'Interior', image: '/images/master bathroom.jpg',                 cols: 1, rows: 1 },
+  { title: 'Master Bath Suite',       category: 'Interior', image: '/images/Master Bath.jpg',                     cols: 1, rows: 1 },
+  { title: 'Dining & Living Room',    category: 'Interior', image: '/images/Dining_Living room_4k.jpg',           cols: 2, rows: 1 },
+  { title: 'Living & Dining',         category: 'Interior', image: '/images/Living room_dining.jpg',              cols: 1, rows: 1 },
+  { title: 'Dining & Living',         category: 'Interior', image: '/images/dining and living.jpg',               cols: 1, rows: 1 },
+  { title: 'Modern Kitchen',          category: 'Interior', image: '/images/Kitchen_4k.jpg',                      cols: 1, rows: 1 },
+  { title: "Chef's Kitchen",          category: 'Interior', image: '/images/kitchen  (1).jpg',                    cols: 1, rows: 1 },
+  { title: 'Recovery Room',           category: 'Interior', image: '/images/Recovery Room.png',                   cols: 1, rows: 1 },
 ]
 
 export default function Portfolio() {

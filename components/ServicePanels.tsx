@@ -14,9 +14,9 @@ const panels = [
     href: '#portfolio',
   },
   {
-    label: 'Night Renders',
-    desc: 'Dramatic lighting that makes your project unforgettable.',
-    image: '/images/Hiergeist-night.jpg',
+    label: 'Multi-Family',
+    desc: 'Apartment complexes, duplexes, and mixed-use developments visualized at their best.',
+    image: '/images/Quadplex.jpg',
     href: '#portfolio',
   },
   {
