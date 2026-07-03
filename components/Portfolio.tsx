@@ -49,6 +49,7 @@ const projects: {
   { title: 'Unit Living Room',        category: 'Interior', image: '/images/Unit Living Room.jpg',                 cols: 2, rows: 1 },
   { title: 'Unit Bedroom',            category: 'Interior', image: '/images/Unit Bedroom.jpg',                     cols: 1, rows: 1 },
   { title: 'Unit Kitchen & Living',   category: 'Interior', image: '/images/Unit Kitchen_living.jpg',              cols: 1, rows: 1 },
+  { title: 'Forest Keep',             category: 'Exterior', image: '/images/Forest Keep.jpg',                      cols: 2, rows: 1 },
 ]
 
 export default function Portfolio() {
